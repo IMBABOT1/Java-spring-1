@@ -1,8 +1,11 @@
 package ru.geekbrains.spring.demo2;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 @Component
+@Scope("singleton")
 public class Box {
     private int size;
 
@@ -14,13 +17,7 @@ public class Box {
     }
 
     public Box(){
-
     }
-
-    public Box(int size){
-        this.size = size;
-    }
-
 
     @Override
     public String toString() {
